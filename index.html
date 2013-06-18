@@ -10,6 +10,9 @@
 
   <script type="text/x-handlebars">
     <h1>This app is useless!</h1>
+    {{#linkTo index}}Home{{/linkTo}}
+    {{#linkTo random_echo 'Hello'}}Hello{{/linkTo}}
+    {{#linkTo random_echo 'OKC.js'}}OKC.js{{/linkTo}}
     <hr />
     {{outlet}}
   </script>
@@ -21,6 +24,11 @@
     {{view Em.TextField valueBinding='content.firstName'}} {{view Em.TextField valueBinding='content.lastName'}}
     </p>
     {{/if}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="random_echo">
+    <h3>Random : {{random}}</h3>
+    <h3>Echo : {{echo_text}}</h3>
   </script>
 
   <script src="js/libs/jquery-1.9.1.js"></script>
