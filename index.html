@@ -16,6 +16,9 @@
 
   <script type="text/x-handlebars" data-template-name="index">
     <p>Created by : {{fullName}}</p>
+    <p>
+    {{view Em.TextField valueBinding='content.firstName'}} {{view Em.TextField valueBinding='content.lastName'}}
+    </p>
   </script>
 
   <script src="js/libs/jquery-1.9.1.js"></script>
