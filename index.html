@@ -9,7 +9,13 @@
 <body>
 
   <script type="text/x-handlebars">
-    <h1>This app is useless!<h1>
+    <h1>This app is useless!</h1>
+    <hr />
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="index">
+    <p>Created by : {{fullName}}</p>
   </script>
 
   <script src="js/libs/jquery-1.9.1.js"></script>
