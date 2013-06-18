@@ -30,3 +30,8 @@ UselessApp.IndexController = Ember.ObjectController.extend({
   toggleEditing:   function(){this.set('isEditing',!this.get('isEditing'))}
 });
 
+UselessApp.RandomEchoView = Ember.View.extend({
+  mouseMove : function(){
+    this.controller.set('random',Math.random())
+  }
+});
