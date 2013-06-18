@@ -15,10 +15,12 @@
   </script>
 
   <script type="text/x-handlebars" data-template-name="index">
-    <p>Created by : {{fullName}}</p>
+    <p>Created by : {{fullName}} - <a href="#"{{action toggleEditing}}>Edit</a></p>
+    {{#if isEditing}}
     <p>
     {{view Em.TextField valueBinding='content.firstName'}} {{view Em.TextField valueBinding='content.lastName'}}
     </p>
+    {{/if}}
   </script>
 
   <script src="js/libs/jquery-1.9.1.js"></script>

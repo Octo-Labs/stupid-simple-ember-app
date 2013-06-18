@@ -20,3 +20,8 @@ UselessApp.IndexRoute = Ember.Route.extend({
   }
 
 });
+
+UselessApp.IndexController = Ember.ObjectController.extend({
+  isEditing:       false,
+  toggleEditing:   function(){this.set('isEditing',!this.get('isEditing'))}
+});
